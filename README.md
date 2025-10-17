@@ -1,2 +1,2 @@
-# Personal_webpage
-Testing personal website
+# Personal Website
+Github repo for personal profile
