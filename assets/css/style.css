@@ -407,7 +407,7 @@ header .navbar ul li a:hover {
   mix-blend-mode: normal;
 }
 .about .row .content {
-  flex: 1 1 45rem;
+  flex: 1 1 95rem;
   padding: 3rem;
 }
 .about .row .content h3 {
@@ -430,7 +430,8 @@ header .navbar ul li a:hover {
 .about .row .content .box-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  margin-top: 1rem;
+  gap: 2rem;
   font-family: "Nunito";
   font-weight: 600;
 }
@@ -440,8 +441,46 @@ header .navbar ul li a:hover {
 .about .row .content .box-container .box p span {
   color: #011aff;
 }
+.content .row {
+  display: flex;
+  flex-direction: row;
+  gap: 18rem;
+  flex-wrap: wrap;
+  padding: 3rem;
+  padding-left: 0rem;
+}
+.content .row span {
+  color: rgb(115, 3, 167);
+}
+.content .row .left-col ul {
+  font-size: 14px;
+  margin-left: 1.5rem;
+}
+.content .row .education-list {
+    list-style: none;
+    padding-left: 0px;
+    font-size: 14px;
+}
+.education-list li {
+  position: relative;
+  padding-left: 20px; /* space for the icon */
+  margin-bottom: 1px;
+  color: black;
+}
+.education-list li::before {
+  content: "\f19d";
+  margin-right: 8px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content .row .education-list li span {
+  color: rgb(87, 87, 87);
+}
 .resumebtn {
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 .resumebtn .btn {
   padding: 1.7rem 3rem;
@@ -449,7 +488,7 @@ header .navbar ul li a:hover {
   transition: 0.3s;
   color: #fff;
   background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
+  box-shadow: 0px;
   font-family: "Nunito", sans-serif;
 }
 .resumebtn .btn span {
@@ -659,9 +698,14 @@ header .navbar ul li a:hover {
 .education .box-container .box .image {
   flex: 1 1 20rem;
   width: 100%;
+  background: linear-gradient(to bottom,#ffffff, #f8dbb4);
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .education .box-container .box img {
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
   width: 100%;
   height: 100%;
@@ -848,7 +892,7 @@ header .navbar ul li a:hover {
 /* work section ends */
 
 /* experience section starts */
-.experience{
+.experience {
   background: #ffffff;
   min-height: 80vh;
 }
@@ -856,6 +900,7 @@ header .navbar ul li a:hover {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 20px;
 }
 .experience .timeline::after {
   content: "";
@@ -880,10 +925,10 @@ header .navbar ul li a:hover {
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -13px;
   background-color: rgb(255, 255, 255);
-  border: 4px solid #ff9f55;
-  top: 15px;
+  border: 2px solid #ff9f55;
+  top: 10px;
   border-radius: 50%;
   z-index: 100;
   font-size: 1.89rem;
@@ -891,6 +936,9 @@ header .navbar ul li a:hover {
   font-weight: 600;
   color: #02094b;
   font-family: "Font Awesome\ 5 Free";
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .experience .left {
   left: 0;
@@ -907,9 +955,9 @@ header .navbar ul li a:hover {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid #f68c09;
+  border: medium solid  #f68b094f;
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f68c09;
+  border-color: transparent transparent transparent  #f68b094f;
 }
 /* arrows pointing left  */
 .experience .right::before {
@@ -920,15 +968,15 @@ header .navbar ul li a:hover {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid #f68c09;
+  border: medium solid  #f68b094f;
   border-width: 10px 10px 10px 0;
-  border-color: transparent #f68c09 transparent transparent;
+  border-color: transparent  #f68b094f transparent transparent;
 }
 .experience .right::after {
   left: -16px;
 }
 .experience .content {
-  background-color: #f68c09;
+  background-color: #f68b094f;
   position: relative;
   border-radius: 6px;
 }
@@ -945,8 +993,8 @@ header .navbar ul li a:hover {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.experience .content .desc p {
-  font-size: 1.2rem;
+.experience .content .desc li{
+  font-size: 1.5rem;
 }
 /* view all button */
 .morebtn {
@@ -1025,138 +1073,31 @@ header .navbar ul li a:hover {
 /* contact section starts */
 .contact {
   background: #e5ecfb;
-  min-height: 60vh;
+  min-height: 40vh;
 }
 .contact .container {
-  max-width: 1050px;
+  /* max-width: 1050px; */
+  display: block;
   width: 100%;
+  height: auto;
   background: #fff;
-  border-radius: 1.5rem;
-  margin: 2rem 5rem;
+  border-radius: 1rem;
+  margin: auto;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 2rem;
 }
 .contact .container .content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2.5rem 2rem;
-}
-.contact .content .image-box {
-  max-width: 60%;
-  margin-left: 4rem;
-}
-.contact .content .image-box img {
-  width: 100%;
-  height: 40rem;
-  position: relative;
-}
-.contact .content form {
-  width: 45%;
-  margin-right: 3.5rem;
-}
-form .form-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.form-group .field {
-  height: 50px;
-  display: flex;
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form i {
-  position: absolute;
-  top: 50%;
-  left: 18px;
-  color: rgb(51, 51, 51);
-  font-size: 17px;
-  pointer-events: none;
-  transform: translateY(-50%);
-}
-form .field input,
-form .message textarea {
-  width: 100%;
-  height: 100%;
-  outline: none;
-  padding: 0 16px 0 48px;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  border-radius: 5px;
-  border: 1px solid rgb(51, 51, 51);
-  background: #e5ecfb;
-}
-.field input::placeholder,
-.message textarea::placeholder {
-  color: rgb(51, 51, 51);
-}
-.field input:focus,
-.message textarea:focus {
-  padding-left: 47px;
-  border: 2px solid rgb(115, 3, 167);
-}
-.field input:focus ~ i,
-.message textarea:focus ~ i {
-  color: rgb(115, 3, 167);
-}
-form .message {
-  position: relative;
-  margin: 1rem;
-  width: 100%;
-}
-form .message i {
-  top: 25px;
-  font-size: 20px;
-  left: 15px;
-}
-form .message textarea {
-  min-height: 130px;
-  max-height: 230px;
-  max-width: 100%;
-  min-width: 100%;
-  padding: 12px 20px 0 48px;
-}
-form .message textarea::-webkit-scrollbar {
-  width: 0px;
-}
-form .button-area {
-  display: flex;
-  float: right;
-  flex-direction: row-reverse;
-}
-.button-area button {
-  color: #fff;
-  border: none;
-  outline: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 13px 25px;
-  background: #2506ad;
-  box-shadow: 0px 5px 10px rgba(48, 68, 247, 0.6);
-  transition: 0.3s ease;
-  font-family: "Nunito", sans-serif;
-}
-.button-area button:hover {
-  background: #421cecf5;
-}
-.button-area span {
-  font-size: 17px;
+  /* align-items: center;
+  justify-content: center; */
   padding: 1rem;
-  display: none;
+  background: #f68b094f;
+  border-radius: 1rem;
 }
-.button-area button i {
-  position: relative;
-  top: 6px;
-  left: 2px;
-  font-size: 1.5rem;
-  transition: 0.3s;
-  color: #fff;
+.contact .container .content ul {
+  font-size: 18px;
+  padding-left: 2rem;
 }
-.button-area button:hover i {
-  left: 8px;
-}
+
 /* contact section media queries starts */
 @media (max-width: 900px) {
   .contact {
@@ -1166,15 +1107,9 @@ form .button-area {
     margin: 3rem 0 2rem 0;
   }
   .contact .container .content {
-    padding: 18px 12px;
+    padding: 18px 15px;
   }
-  .contact .content .image-box {
-    display: none;
-  }
-  .contact .content form {
-    width: 100%;
-    margin-right: 2rem;
-  }
+
 }
 /* contact section media queries ends */
 /* contact section ends */
